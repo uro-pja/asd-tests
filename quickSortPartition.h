@@ -3,9 +3,12 @@
 #include <vector>
 #include "partition.h"
 
-void quickSortPartition(std::vector<int> E, int &partitionCallAmount) {
+void quickSortPartition(std::vector<int> &E, int &partitionCallAmount) {
 
     int m = 0, size = (int) E.size();
+
+    printf("Argument wykonania :    ");
+    print(E);
 
     partitionCallAmount++;
     m = partition(E);
