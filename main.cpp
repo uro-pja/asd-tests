@@ -1,10 +1,11 @@
 #include <iostream>
 #include "insertionSort.h"
-#include "countingSort.h"
+#include "radixSort.h"
+#include "mergeSort.h"
 
 int main() {
-    std::vector<int> vec{1, 0, 3, 3, 3, 1, 1, 1, 2, 3, 3};
-    std::vector<int> vec2{0, 13, 6, 11, 5, 2, 8, 14, 3, 17, 9};
+    std::vector<int> vec{19, 3, 12, 17, 5, 0, 2, 18, 16, 6, 15, 7, 14};
+    std::vector<int> vec2{12, 15,6,3,7,17,16,5,0,19,2,18,14};
 
 //    insertionSort(vec);
 
@@ -20,9 +21,13 @@ int main() {
     printf("Ilość wywołań algorytmu partition: %d\n\n", partitionCallAmount);
 //*/
 
-    CountingSort(vec);
+//    countingSort(vec);
 
-//    mergeSort(vec);
+//    radixSort(vec, 3);
+    printf("\n\nPierwszy mergeSort: \n");
+    mergeSort(vec.data(), vec.size());
+    printf("\n\nDrugi mergeSort: \n");
+    mergeSort(vec2.data(), vec2.size());
 //    for (int x = 0; x < vec.size(); x++) {
 //        std::cout << " " << vec[x] << ",";
 //    }

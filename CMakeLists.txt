@@ -10,6 +10,6 @@ set(SOURCE_FILES
         quickSortPartition.h
         hoarePartition.h
         radixSort.h
-        MergeSort.h countingSort.h)
+        mergeSort.h countingSort.h)
 
 add_executable(ALG3 ${SOURCE_FILES})
