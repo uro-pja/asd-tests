@@ -7,6 +7,9 @@ void quickSortPartition(std::vector<int> E, int &partitionCallAmount) {
 
     int m = 0, size = (int) E.size();
 
+    printf("Argument wykonania :    ");
+    print(E);
+
     partitionCallAmount++;
     m = partition(E);
 

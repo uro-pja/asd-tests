@@ -1,7 +1,6 @@
 #include <iostream>
 #include <vector>
-
-void print(std::vector<int> E);
+#include "print.h"
 
 void countingSort(std::vector<int> E) {
 
@@ -14,11 +13,16 @@ void countingSort(std::vector<int> E) {
     std::vector<int> Out((unsigned long) size, 0);
 
     // Zliczenie
+    printf("\nPętla zliczania:\n");
     for (int i = 0; i < size; i++) {
         Tmp[E[i]] = Tmp[E[i]] + 1;
+
+        printf("    nr: %d. Postać tablicy pomocniczej:    ", printIterator++);
+        print(Tmp);
     }
 
     // Sumowanie
+    printIterator = 1;
     printf("\nPętla sumowania:\n");
     for (int i = 1; i < maxElement + 1; i++) {
         Tmp[i] = Tmp[i] + Tmp[i - 1];
@@ -39,13 +43,4 @@ void countingSort(std::vector<int> E) {
 
     printf("\nPosortowana tablica:\n");
     print(Out);
-}
-
-void print(std::vector<int> Tab) {
-    int size = (int) Tab.size();
-
-    for (int i = 0; i < size; ++i) {
-        printf(" %d,", Tab[i]);
-    }
-    printf("\n");
 }

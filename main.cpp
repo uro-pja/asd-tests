@@ -4,10 +4,10 @@
 #include "mergeSort.h"
 
 int main() {
-    std::vector<int> vec{19, 3, 12, 17, 5, 0, 2, 18, 16, 6, 15, 7, 14};
-    std::vector<int> vec2{12, 15,6,3,7,17,16,5,0,19,2,18,14};
+    std::vector<int> vec{4,11,3,10,8,19,12,18,1,0,6};
+    std::vector<int> vec2{13, 0, 6, 5, 11, 16, 15, 11, 8, 17, 3, 10, 4, 14};
 
-//    insertionSort(vec);
+    insertionSort(vec);
 
 /*
     // Quick sort partition
@@ -23,11 +23,13 @@ int main() {
 
 //    countingSort(vec);
 
-//    radixSort(vec, 3);
-    printf("\n\nPierwszy mergeSort: \n");
-    mergeSort(vec.data(), vec.size());
-    printf("\n\nDrugi mergeSort: \n");
-    mergeSort(vec2.data(), vec2.size());
+//    radixSort(vec, 2);
+
+
+//    printf("\n\nPierwszy mergeSort: \n");
+//    mergeSort(vec.data(), vec.size());
+//    printf("\n\nDrugi mergeSort: \n");
+//    mergeSort(vec2.data(), vec2.size());
 //    for (int x = 0; x < vec.size(); x++) {
 //        std::cout << " " << vec[x] << ",";
 //    }
