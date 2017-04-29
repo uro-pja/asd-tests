@@ -5,12 +5,11 @@
 #include "countingSort.h"
 #include "quickSortPartition.h"
 
-//19:17
 int main() {
     std::vector<int> vec{659,867,438,593,941,359,225,995,368,101,886};
     std::vector<int> vec2{941,101,593,225,995,886,867,438,368,659,359};
 
-//    insertionSort(vec);
+    insertionSort(vec);
 
 /*
     // Quick sort partition
