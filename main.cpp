@@ -7,16 +7,16 @@
 
 //19:17
 int main() {
-    std::vector<int> vec{7,16,12,11,5,10,0,1,3,19,14};
-    std::vector<int> vec2{19,14,11,0,5,3,10,16,1,12,7};
+    std::vector<int> vec{659,867,438,593,941,359,225,995,368,101,886};
+    std::vector<int> vec2{941,101,593,225,995,886,867,438,368,659,359};
 
 //    insertionSort(vec);
 
-///*
+/*
     // Quick sort partition
     int partitionCallAmount = 0;
     quickSortPartition(vec, partitionCallAmount);
-    printf("Ilość wywołań algorytmu partition: %d\n\n", partitionCallAmount);
+    printf("Ilość wywołań algorytmu partition: %d\n\n\n", partitionCallAmount);
 
     // Quick sort partition check with vector2
     partitionCallAmount = 0;
@@ -26,7 +26,7 @@ int main() {
 
 //    countingSort(vec);
 
-//    radixSort(vec, 2);
+    radixSort(vec, 1);
 
 
 //    printf("\n\nPierwszy mergeSort: \n");

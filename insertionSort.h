@@ -6,7 +6,7 @@ void insertionSort(std::vector<int> E) {
 
     for (i = 1; i < size+1; ++i) {
 
-        printf("Outer loop iteration num: %d \n", i);
+        printf("\nOuter loop iteration num: %d \n", i);
         j = i;
         while ((j > 0) && (E[j - 1] > E[j])) {
             std::swap(E[j - 1], E[j]);
