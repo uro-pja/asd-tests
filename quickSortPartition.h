@@ -1,11 +1,9 @@
 #include <iostream>
 #include <algorithm>
 #include <vector>
-#include "Partition.h"
+#include "partition.h"
 
-using namespace std;
-
-void QuickSortPartition(vector<int> E, int &partitionCallAmount) {
+void quickSortPartition(std::vector<int> E, int &partitionCallAmount) {
 
     int m = 0, size = (int) E.size();
 
@@ -14,11 +12,11 @@ void QuickSortPartition(vector<int> E, int &partitionCallAmount) {
 
     if (m > 1) {
         printf("Lewe wywołanie rekurencyjne QuickSortPartition\n");
-        QuickSortPartition(vector<int>(&E[0], E.data() + m), partitionCallAmount);
+        quickSortPartition(std::vector<int>(&E[0], E.data() + m), partitionCallAmount);
     }
 
     if ((size - m - 1) > 1) {
         printf("Prawe wywołanie rekurencyjne QuickSortPartition\n");
-        QuickSortPartition(vector<int>(&E[m + 1], E.data() + size), partitionCallAmount);
+        quickSortPartition(std::vector<int>(&E[m + 1], E.data() + size), partitionCallAmount);
     }
 }

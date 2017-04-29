@@ -5,11 +5,11 @@ set(CMAKE_CXX_STANDARD 11)
 
 set(SOURCE_FILES
         main.cpp
-        Partition.h
-        InsertionSort.h
-        QuickSortPartition.h
-        HoarePartition.h
-        RadixSort.h
-        MergeSort.h)
+        partition.h
+        insertionSort.h
+        quickSortPartition.h
+        hoarePartition.h
+        radixSort.h
+        MergeSort.h countingSort.h)
 
 add_executable(ALG3 ${SOURCE_FILES})

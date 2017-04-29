@@ -1,23 +1,34 @@
 #include <iostream>
-#include "InsertionSort.h"
-#include "QuickSortPartition.h"
-
-using namespace std;
+#include "insertionSort.h"
+#include "countingSort.h"
 
 int main() {
-    vector<int> vec{13, 0, 19, 6, 2, 8, 1, 16, 18, 4, 14};
-    vector<int> vec2{2, 8, 0, 6, 1, 13, 16, 18, 4, 19, 14};
+    std::vector<int> vec{1, 0, 3, 3, 3, 1, 1, 1, 2, 3, 3};
+    std::vector<int> vec2{0, 13, 6, 11, 5, 2, 8, 14, 3, 17, 9};
 
-//    InsertionSort(vec);
+//    insertionSort(vec);
 
+/*
+    // Quick sort partition
     int partitionCallAmount = 0;
-    QuickSortPartition(vec, partitionCallAmount);
+    quickSortPartition(vec, partitionCallAmount);
     printf("Ilość wywołań algorytmu partition: %d\n\n", partitionCallAmount);
 
+    // Quick sort partition check with vector2
     partitionCallAmount = 0;
-    QuickSortPartition(vec2, partitionCallAmount);
+    quickSortPartition(vec2, partitionCallAmount);
     printf("Ilość wywołań algorytmu partition: %d\n\n", partitionCallAmount);
+//*/
 
+    countingSort(vec);
+
+//    mergeSort(vec);
+//    for (int x = 0; x < vec.size(); x++) {
+//        std::cout << " " << vec[x] << ",";
+//    }
+//
+//    printf("\n\n");
+//    mergeSort(vec2);
 
     return 0;
 }
