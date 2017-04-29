@@ -20,7 +20,7 @@ int main() {
     printf("Ilość wywołań algorytmu partition: %d\n\n", partitionCallAmount);
 //*/
 
-    countingSort(vec);
+    CountingSort(vec);
 
 //    mergeSort(vec);
 //    for (int x = 0; x < vec.size(); x++) {
