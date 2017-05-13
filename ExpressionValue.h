@@ -76,7 +76,7 @@ int ExpressionValue(std::string str) {
         Opr.push(element);
     }
 
-    printf("Max Arg: %d, Max Oper: %d Pop: %d, Pushes: %d", hmax, omax, pops, pushes2);
+    printf("Max Arg: %d, Max Oper: %d Pop Arg: %d, Pushes Arg: %d", hmax, omax, pops, pushes2);
 
     return atoi(Arg.top());
 }

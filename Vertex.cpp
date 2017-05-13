@@ -1,7 +1,3 @@
-//
-// Created by Arkadiusz Surma on 13/05/2017.
-//
-
 #include "Vertex.h"
 #pragma once
 

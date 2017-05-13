@@ -35,7 +35,7 @@ std::vector<Vertex *> DFS(Graph *G, Vertex *s) {
     std::vector<Vertex *> L;
     while (!S.empty()) {
         tmp = S.top();
-        printf("Vertex: %d\n", tmp->index);
+        printf("\nVertex: %d  --", tmp->index);
         pop(S);
         L.push_back(tmp);
         for (Vertex *neighbour: tmp->getNeighbours()) {
@@ -43,6 +43,7 @@ std::vector<Vertex *> DFS(Graph *G, Vertex *s) {
                 neighbour->parent = tmp;
                 push(S, neighbour);
                 checked[neighbour->index] = true;
+                printf(" %d", neighbour->index);
             }
         }
     }
