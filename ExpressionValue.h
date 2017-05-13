@@ -18,16 +18,21 @@ int calculate(char op, int a, int b) {
 }
 
 int hmax = 0;
+int omax = 0;
+int ocurrent = 0;
+int pushes2 = 0;
 int pops = 0;
 
 void pop(int &hCurrent, std::stack<char *> &Arg) {
     hCurrent--;
+    ocurrent--;
     Arg.pop();
     pops++;
 }
 
 void push(const char *value, int &hCurrent, std::stack<char *> &Arg) {
     hCurrent++;
+    pushes2++;
     if (hCurrent > hmax) hmax = hCurrent;
     Arg.push((char *&&) value);
 }
@@ -53,6 +58,7 @@ int ExpressionValue(std::string str) {
             pop(hCurrent, Arg);
             result = std::to_string(calculate(Opr.top(), atoi(first), atoi(Arg.top())));
             pop(hCurrent, Arg);
+            ocurrent--;
             Opr.pop();
 
             push(result.c_str(), hCurrent, Arg);
@@ -65,10 +71,12 @@ int ExpressionValue(std::string str) {
             continue;
         }
 
+        ocurrent++;
+        if (ocurrent > omax) omax = ocurrent;
         Opr.push(element);
     }
 
-    printf("Max: %d, Pop: %d", hmax, pops);
+    printf("Max Arg: %d, Max Oper: %d Pop: %d, Pushes: %d", hmax, omax, pops, pushes2);
 
     return atoi(Arg.top());
 }
