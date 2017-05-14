@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.6)
-project(ALG3)
+project(T3)
 
 set(CMAKE_CXX_STANDARD 11)
 
@@ -12,4 +12,4 @@ set(SOURCE_FILES
         radixSort.h
         mergeSort.h countingSort.h print.h)
 
-add_executable(ALG3 ${SOURCE_FILES})
+add_executable(T3 ${SOURCE_FILES})
